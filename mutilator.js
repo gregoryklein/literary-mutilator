@@ -8,15 +8,16 @@ function changeFont() {
 	document.getElementById("text").style.font = "italic bold 16px sans-serif";
 }
 
-//will try to change this to a keyboard event. currently adds BORK to end of p tag
-function newBork() {
+//adds text to the end of the last paragraph when B key is pressed
+document.addEventListener("keydown", function newBork(event) {
+	if(event.code == "KeyB") {
 		var oldtext = document.getElementById("addBork");
 
 		oldtext.textContent += "BORK! ";
 	}
+});
 
-var htmlText = changeBork.textContent;
-
+//finds and replaces bork text with BORKBORKBORK
 function replaceBork() {
 	document.body.innerHTML = document.body.innerHTML.replace("bork", "BORKBORKBORK");
 }
