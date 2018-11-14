@@ -8,6 +8,16 @@ function changeFont() {
 	document.getElementById("text").style.font = "italic bold 16px sans-serif";
 }
 
+//finds and replaces bork text with BORKBORKBORK
+function replaceBork() {
+	document.body.innerHTML = document.body.innerHTML.replace("bork", "BORKBORKBORK");
+}
+
+//highlights the word "doggo" in last paragraph
+function highlightDoggo() {
+	document.body.innerHTML = document.body.innerHTML.replace(/doggo/g, "<span class='highlight'>doggo</span>");
+}
+
 //adds text to the end of the last paragraph when B key is pressed
 document.addEventListener("keydown", function newBork(event) {
 	if(event.code == "KeyB") {
@@ -16,8 +26,3 @@ document.addEventListener("keydown", function newBork(event) {
 		oldtext.textContent += "BORK! ";
 	}
 });
-
-//finds and replaces bork text with BORKBORKBORK
-function replaceBork() {
-	document.body.innerHTML = document.body.innerHTML.replace("bork", "BORKBORKBORK");
-}
