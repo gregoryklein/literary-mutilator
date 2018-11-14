@@ -1,7 +1,6 @@
 //changes text color
 function textColor() {
 	document.getElementById("text").style.color = "#ff9d00";
-	console.log("hi");
 }
 
 //changes font
@@ -15,3 +14,9 @@ function newBork() {
 
 		oldtext.textContent += "BORK! ";
 	}
+
+var htmlText = changeBork.textContent;
+
+function replaceBork() {
+	document.body.innerHTML = document.body.innerHTML.replace("bork", "BORKBORKBORK");
+}
