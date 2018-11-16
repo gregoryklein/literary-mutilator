@@ -10,7 +10,7 @@ function changeFont() {
 
 //finds and replaces bork text with BORKBORKBORK
 function replaceBork() {
-	document.body.innerHTML = document.body.innerHTML.replace("bork", "BORKBORKBORK");
+	document.body.innerHTML = document.body.innerHTML.replace("bork", "<strong>BORK BORK BORK </strong>");
 }
 
 //highlights the word "doggo" in last paragraph
@@ -27,6 +27,7 @@ document.addEventListener("keydown", function newBork(event) {
 	}
 });
 
+//top secret ROT13 doggo encryption
 function rot(s) {
 	return s.replace(/[a-zA-Z]/g, function (c) {
 		return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
